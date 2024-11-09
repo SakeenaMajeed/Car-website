@@ -28,7 +28,7 @@ const cars = [
 export default function NewestCar() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index : any) => {
     setCurrentIndex(index);
   };
 

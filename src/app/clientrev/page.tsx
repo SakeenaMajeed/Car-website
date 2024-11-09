@@ -1,6 +1,5 @@
-// src/app/clientrev/Client.tsx
-
 import React from 'react';
+import Image from 'next/image';
 import '@/styling/ClientRev.css';
 
 const Client = () => {
@@ -31,8 +30,8 @@ const Client = () => {
       <div className="review-cards">
         {reviews.map((review, index) => (
           <div key={index} className="review-card">
-            <img src={review.image} alt={review.name} className="review-image" />
-            <p className="review-text">"{review.review}"</p>
+            <Image src={review.image} alt={review.name} className="review-image" width={100} height={100} />
+            <p className="review-text">&quot;{review.review}&quot;</p>
             <h3 className="reviewer-name">{review.name}</h3>
             <h4 className="reviewer-location">{review.location}</h4>
           </div>
