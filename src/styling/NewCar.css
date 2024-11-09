@@ -1,0 +1,207 @@
+#newcar {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.honey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.honey p {
+  font-size: 14px;
+  color: #535353;
+  margin-bottom: 5px;
+}
+
+.honey h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background-color: #4f46e5;
+  margin: 10px auto 20px;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.carImage {
+  flex: 1;
+  max-width: 100%; /* Ensures the image doesn't exceed container width */
+}
+
+.carDetails {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.carDetails h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.carDetails p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.detailsButton {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detailsButton:hover {
+  background-color: #3730a3;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: #999;
+}
+
+.active {
+  background-color: #4f46e5;
+}
+
+/* Tablet and Desktop Styles */
+@media (max-width: 1024px) {
+  .honey h2 {
+    font-size: 26px;
+  }
+
+  .carDetails h3 {
+    font-size: 20px;
+  }
+
+  .detailsButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .carContainer {
+    gap: 20px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #newcar {
+    padding: 40px 15px;
+  }
+
+  .carContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carImage,
+  .carDetails {
+    width: 100%;
+    text-align: center;
+  }
+
+  .carDetails h3 {
+    font-size: 18px;
+  }
+
+  .detailsButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .honey p,
+  .carDetails p {
+    font-size: 13px;
+  }
+
+  .honey h2 {
+    font-size: 22px;
+  }
+
+  .underline {
+    width: 30px;
+    margin: 8px auto 16px;
+  }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 480px) {
+  .honey p,
+  .carDetails p {
+    font-size: 12px;
+  }
+
+  .detailsButton {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .honey h2 {
+    font-size: 20px;
+  }
+
+  .carDetails h3 {
+    font-size: 16px;
+  }
+
+  .underline {
+    width: 25px;
+    height: 2px;
+  }
+
+  .dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

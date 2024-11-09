@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #ffffff;
+  transition: background 0.3s ease;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Initial transparent */
+}
+
+/* Dark background on scroll */
+.header.scrolled {
+  background-color: #111;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: #f0a500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-right: auto; /* Aligns the logo to the left side */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: center;  /* Ensures navbar items are centered */
+  width: 100%; /* Ensures navbar takes up the full width of the screen */
+  font-size: 20px;
+  position: relative; /* Ensures position is relative for better flexibility */
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centers the navbar links */
+  align-items: center; /* Vertically centers the links */
+}
+
+.navbar li {
+  margin: 0 15px; /* Adds space between each list item */
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffda0b;
+}
+
+/* Hamburger Menu Button */
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  transition: color 0.3s ease;
+  position: absolute; /* Positioning menu button to the right */
+  right: 20px; /* Adjust the value as needed */
+}
+
+.menu-button:hover {
+  color: #f0a500;
+}
+
+.menu-button div {
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-button.open div:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+
+.menu-button.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #f0a500;
+}
+
+/* Tablet and Mobile Styles */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  /* Mobile Menu */
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000000;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    gap: 20px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu.show {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .navbar li {
+    margin: 20px 0;
+  }
+
+  .navbar a {
+    font-size: 20px;
+  }
+}
+
+/* Small Mobile Adjustments */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-button {
+    font-size: 28px;
+    padding-left: 10px; /* Adds left padding */
+    padding-right: 35px; /* Adds right padding */
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .header {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 1025px) {
+  .menu-button {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+  }
+
+  .navbar li {
+    margin-left: 30px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+}
